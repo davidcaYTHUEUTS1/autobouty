@@ -1,0 +1,75 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Edward Newgate Hub", HidePremium = false, IntroText = "Edward Newgate Hub", IntroEnabled = true, SaveConfig = true, ConfigFolder = "Edward Newgate Hub"})
+
+OrionLib:MakeNotification({
+	Name = "Edward Newgate Hub ",
+	Content = "https://discord.gg/wMAAcxjFww",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Main:AddButton({
+	Name = "auto farm",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+Main:AddToggle({
+	Name = "AutoFarmLever",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+Main:AddToggle({
+	Name = "AutoChest",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+Main:AddToggle({
+	Name = " AutoBone ",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+
+AutoFarmLever(function ()
+    function CheckQuest() 
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/davidcaYTHUEUTS1/autobouty/main/Auto%20farm"))()
+                -- thong bao 
+                OrionLib:MakeNotification({
+                    Name = "Edward Newgate Hub ",
+                    Content = "ON | Auto farm Lever ",
+                    Image = "rbxassetid://4483345998",
+                    Time = 5
+                })
+            end
+end)
+
+AutoChest(function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/emdepthat/EdwardNewgateHub/main/autochest"))()
+    -- thong bao
+    OrionLib:MakeNotification({
+        Name = "Edward Newgate Hub",
+        Content = "ON | Auto Chest ",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+end)
+
+
+
+
