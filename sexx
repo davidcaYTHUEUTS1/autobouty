@@ -1,0 +1,103 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Edward Newgate Hub", HidePremium = false, IntroText = "Edward Newgate Hub", IntroEnabled = true, SaveConfig = true, ConfigFolder = "Edward Newgate Hub"})
+
+
+OrionLib:MakeNotification({
+	Name = "Edward Newgate Hub ",
+	Content = "https://discord.gg/wMAAcxjFww",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Tab = Window:MakeTab({
+	Name = "Info",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Info:AddSection({
+	Name = " script Buy Edward Newgate "
+})
+
+local Section = Info:AddSection({
+	Name = "Thanks for using the script"
+})
+
+
+Main:AddDropdown({
+	Name = "weapon",
+	Default = "Mele",
+	Options = {"Mele", "Sword", "Fruit"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Main:AddSection({
+	Name = "Auto Farm Lever"
+})
+
+Main:AddToggle({
+	Name = "AutoFarmLever",
+	Default = false,
+	Callback = function(Value)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/davidcaYTHUEUTS1/autobouty/main/Auto%20farm"))()
+	end    
+})
+
+
+AutoFarmLever(function ()
+                -- thong bao 
+                OrionLib:MakeNotification({
+                    Name = "Edward Newgate Hub ",
+                    Content = "ON | Auto farm Lever ",
+                    Image = "rbxassetid://4483345998",
+                    Time = 5
+                })
+end)
+
+
+Main:AddToggle({
+	Name = "AutoChest",
+	Default = false,
+	Callback = function(Value)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/emdepthat/EdwardNewgateHub/main/autochest"))()
+	end    
+})
+
+local Section = Main:AddSection({
+	Name = "AutoChest"
+})
+
+AutoChest(function ()
+    -- thong bao
+    OrionLib:MakeNotification({
+        Name = "Edward Newgate Hub",
+        Content = "ON | Auto Chest ",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+end)
+
+local Section = Main:AddSection({
+	Name = "AutoFarmBone"
+})
+
+Main:AddToggle({
+	Name = " AutoFarmBone ",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+AutoFarmBone(function ()
+    
+end)
