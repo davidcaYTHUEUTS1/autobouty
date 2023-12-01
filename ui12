@@ -1,0 +1,9 @@
+script.Parent.ImageButton.MouseButton1Down:Connect(function()
+	if script.Parent.Frame.Visible == true then
+		script.Parent.Frame.Visible = false
+	else
+		script.Parent.Frame.Visible = true
+	end
+end)
+
+
