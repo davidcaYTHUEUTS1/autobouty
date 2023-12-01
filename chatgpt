@@ -1,0 +1,90 @@
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
+local Window = OrionLib:MakeWindow({Name = "Edward Newgate Hub", HidePremium = false, IntroText = "Edward Newgate Hub", IntroEnabled = true, SaveConfig = true, ConfigFolder = "Edward Newgate Hub"})
+
+OrionLib:MakeNotification({
+    Name = "Edward Newgate Hub",
+    Content = "https://discord.gg/wMAAcxjFww",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
+
+local Tab = Window:MakeTab({
+    Name = "Main",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab:AddDropdown({
+    Name = "weapon",
+    Default = "Mele",
+    Options = {"Mele", "Sword", "Fruit"},
+    Callback = function(Value)
+        print(Value)
+    end    
+})
+
+Tab:AddToggle({
+    Name = "AutoFarmLever",
+    Default = false,
+    Callback = function(Value)
+        print(Value)
+        if Value then
+            -- Enable AutoFarmLever logic
+            CheckQuest()
+        else
+            -- Disable AutoFarmLever logic
+        end
+    end    
+})
+
+local function CheckQuest() 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/davidcaYTHUEUTS1/autobouty/main/Auto%20farm"))()
+    OrionLib:MakeNotification({
+        Name = "Edward Newgate Hub",
+        Content = "ON | Auto farm Lever",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+end
+
+Tab:AddToggle({
+    Name = "AutoChest",
+    Default = false,
+    Callback = function(Value)
+        print(Value)
+        if Value then
+            -- Enable AutoChest logic
+            AutoChestFunction()
+        else
+            -- Disable AutoChest logic
+        end
+    end    
+})
+
+local function AutoChestFunction()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/emdepthat/EdwardNewgateHub/main/autochest"))()
+    OrionLib:MakeNotification({
+        Name = "Edward Newgate Hub",
+        Content = "ON | Auto Chest",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+end
+
+Tab:AddToggle({
+    Name = "AutoFarmBone",
+    Default = false,
+    Callback = function(Value)
+        print(Value)
+        if Value then
+            -- Enable AutoFarmBone logic
+            AutoFarmBoneFunction()
+        else
+            -- Disable AutoFarmBone logic
+        end
+    end    
+})
+
+local function AutoFarmBoneFunction()
+    -- Add AutoFarmBone logic here
+end
